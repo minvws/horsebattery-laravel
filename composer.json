@@ -1,0 +1,17 @@
+{
+    "name": "paulinevos/horsebattery-laravel",
+    "description": "A Laravel package for the horsebattery password generator package",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Paulinevos\\HorsebatteryLaravel\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Pauline Vos",
+            "email": "pvos88@gmail.com"
+        }
+    ],
+    "require": {}
+}
