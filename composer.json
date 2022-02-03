@@ -1,10 +1,10 @@
 {
-    "name": "paulinevos/horsebattery-laravel",
-    "description": "A Laravel package for the horsebattery password generator package",
+    "name": "minvws/horsebattery-laravel",
+    "description": "A Laravel package for the horsebattery password generator",
     "type": "library",
     "autoload": {
         "psr-4": {
-            "Paulinevos\\HorsebatteryLaravel\\": "src/"
+            "MinVWS\\HorseBattery\\Laravel\\": "src/"
         }
     },
     "authors": [
@@ -13,5 +13,21 @@
             "email": "pvos88@gmail.com"
         }
     ],
-    "require": {}
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MinVWS\\HorseBattery\\Laravel\\HorseBatteryServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "laravel/framework": "^8.82",
+        "minvws/horsebattery": "^1.1"
+    },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "git@github.com:91divoc-ln/horsebattery.git"
+        }
+    ]
 }

@@ -1,23 +1,13 @@
 <?php
 
-namespace App\Providers;
+namespace MinVWS\HorseBattery\Laravel;
 
 use Illuminate\Support\ServiceProvider;
 use Minvws\HorseBattery\HorseBattery;
 use Minvws\HorseBattery\PasswordGenerator;
 
-final class PasswordGeneratorServiceProvider extends ServiceProvider
+final class HorseBatteryServiceProvider extends ServiceProvider
 {
-    /**
-     * Register services.
-     *
-     * @return void
-     */
-    public function register()
-    {
-        //
-    }
-
     /**
      * Bootstrap services.
      *
