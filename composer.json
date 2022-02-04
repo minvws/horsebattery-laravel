@@ -7,6 +7,11 @@
             "MinVWS\\HorseBattery\\Laravel\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "MinVWS\\HorseBattery\\Laravel\\Tests\\": "tests"
+        }
+    },
     "authors": [
         {
             "name": "Pauline Vos",
@@ -17,12 +22,20 @@
         "laravel": {
             "providers": [
                 "MinVWS\\HorseBattery\\Laravel\\HorseBatteryServiceProvider"
-            ]
+            ],
+            "aliases": {
+                "PasswordGenerator": "MinVWS\\HorseBattery\\Laravel\\Facades\\PasswordGenerator"
+            }
         }
     },
     "require": {
-        "laravel/framework": "^8.82",
-        "minvws/horsebattery": "^1.1"
+        "php": "^8.0",
+        "minvws/horsebattery": "^1.1",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.5"
     },
     "repositories": [
         {
