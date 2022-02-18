@@ -11,26 +11,26 @@ class FacadeTest extends TestCase
 {
     use WithFaker;
 
-    public function test_it_returns_horse_battery()
+    public function testItReturnsHorseBattery()
     {
         $passwordGenerator = app(\Minvws\HorseBattery\PasswordGenerator::class);
 
         self::assertInstanceOf(HorseBattery::class, $passwordGenerator);
     }
 
-    public function test_it_returns_a_password()
+    public function testItReturnsAPassword()
     {
         $password = PasswordGenerator::generate();
 
         self::assertNotEmpty($password);
     }
 
-    public function test_custom_wordlist()
+    public function testCustomWordlist()
     {
         $wordList = $this->generateWordList();
 
         $this->app->singleton(\Minvws\HorseBattery\PasswordGenerator::class, function () use ($wordList) {
-            return new HorseBattery(null, ...$wordList);
+            return new HorseBattery(null, $wordList);
         });
 
         $password = PasswordGenerator::generate();
