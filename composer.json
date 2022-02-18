@@ -2,6 +2,12 @@
     "name": "minvws/horsebattery-laravel",
     "description": "A Laravel package for the horsebattery password generator",
     "type": "library",
+    "keywords": [
+      "laravel",
+      "security",
+      "password"
+    ],
+    "license": "EUPL-1.2",
     "autoload": {
         "psr-4": {
             "MinVWS\\HorseBattery\\Laravel\\": "src/"
@@ -16,6 +22,10 @@
         {
             "name": "Pauline Vos",
             "email": "pvos88@gmail.com"
+        },
+        {
+            "name": "Joshua Thijssne",
+            "email": "jthijssen@noxlogic.nl"
         }
     ],
     "extra": {
@@ -35,12 +45,18 @@
     },
     "require-dev": {
         "orchestra/testbench": "^6.0",
-        "phpunit/phpunit": "^9.5"
+        "phpunit/phpunit": "^9.5",
+        "vimeo/psalm": "^4.4",
+        "phpstan/phpstan": "^0.12.80",
+        "squizlabs/php_codesniffer": "^3.6",
+        "mockery/mockery": "^1.4.3"
     },
-    "repositories": [
-        {
-            "type": "git",
-            "url": "git@github.com:91divoc-ln/horsebattery.git"
-        }
-    ]
+    "scripts": {
+      "test": [
+          "vendor/bin/phpunit",
+          "vendor/bin/phpstan analyse",
+          "vendor/bin/psalm",
+          "vendor/bin/phpcs"
+      ]
+    }
 }
