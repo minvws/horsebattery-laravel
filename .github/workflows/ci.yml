@@ -30,6 +30,8 @@ jobs:
             - name: Install dependencies
               run: |
                   composer self-update
+                  # --prefer-lowest installs Laravel versions with security advisories. Composer must still install them to test them.
+                  composer config policy.advisories.block false
                   COMPOSER_MEMORY_LIMIT=-1 composer update --prefer-dist --no-interaction $COMPOSER_FLAGS
             - name: Static analysis with PHPStan
               run: vendor/bin/phpstan analyse
